@@ -2,6 +2,20 @@
 
 A new Flutter project.
 
+Untuk Calendar saya Menggunakan dependencies
+https://pub.dev/packages/table_calendar .
+
+untuk form saya menggunakan
+https://pub.dev/packages/snippet_coder_utils .
+
+untuk widget Search Doctor,doctor detail,beserta loading search nya
+bisa di akses di folder app/modules/schdule/widgets .
+
+untuk payment beserta proses loadingnya di
+app/modules/addpayment/views .
+
+
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
