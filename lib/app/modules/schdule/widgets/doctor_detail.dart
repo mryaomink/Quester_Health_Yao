@@ -240,6 +240,17 @@ class DoctorDetail extends StatelessWidget {
                 ),
               ),
             ),
+            Container(
+              alignment: Alignment.bottomCenter,
+              width: double.infinity,
+              height: 52.0,
+              margin: const EdgeInsets.symmetric(horizontal: 20),
+              child: ElevatedButton(
+                style: ElevatedButton.styleFrom(primary: Colors.blue),
+                onPressed: () {},
+                child: const Text('Continue'),
+              ),
+            )
           ],
         ),
       ),

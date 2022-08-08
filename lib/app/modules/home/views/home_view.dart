@@ -135,7 +135,7 @@ class HomeView extends GetView<HomeController> {
                 children: [
                   IconButton(
                     onPressed: () {
-                      Get.toNamed("/editprofile");
+                      Get.toNamed("/manageakun");
                     },
                     icon: const Icon(
                       Icons.manage_accounts,
@@ -144,10 +144,32 @@ class HomeView extends GetView<HomeController> {
                   ),
                   InkWell(
                     onTap: () {
-                      Get.toNamed("/editprofile");
+                      Get.toNamed("/manageakun");
                     },
                     child: Text(
                       'Manage Account',
+                      style: GoogleFonts.nunito(fontSize: 16.0),
+                    ),
+                  ),
+                ],
+              ),
+              Row(
+                children: [
+                  IconButton(
+                    onPressed: () {
+                      Get.toNamed("/security");
+                    },
+                    icon: const Icon(
+                      Icons.security,
+                      color: Colors.black,
+                    ),
+                  ),
+                  InkWell(
+                    onTap: () {
+                      Get.toNamed("/security");
+                    },
+                    child: Text(
+                      'Security',
                       style: GoogleFonts.nunito(fontSize: 16.0),
                     ),
                   ),

@@ -29,6 +29,8 @@ abstract class Routes {
 
   static const INTRO = _Paths.INTRO;
   static const OTPPAGE = _Paths.OTPPAGE;
+  static const MANAGEAKUN = _Paths.MANAGEAKUN;
+  static const SECURITY = _Paths.SECURITY;
 }
 
 abstract class _Paths {
@@ -57,4 +59,6 @@ abstract class _Paths {
 
   static const INTRO = '/intro';
   static const OTPPAGE = '/otppage';
+  static const MANAGEAKUN = '/manageakun';
+  static const SECURITY = '/security';
 }

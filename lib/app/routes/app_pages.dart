@@ -22,6 +22,8 @@ import '../modules/intro/bindings/intro_binding.dart';
 import '../modules/intro/views/intro_view.dart';
 import '../modules/login/bindings/login_binding.dart';
 import '../modules/login/views/login_view.dart';
+import '../modules/manageakun/bindings/manageakun_binding.dart';
+import '../modules/manageakun/views/manageakun_view.dart';
 import '../modules/otppage/bindings/otppage_binding.dart';
 import '../modules/otppage/views/otppage_view.dart';
 import '../modules/payment/bindings/payment_binding.dart';
@@ -35,6 +37,8 @@ import '../modules/schdule/views/schdule_view.dart';
 import '../modules/schdule/widgets/cari_doctor.dart';
 import '../modules/schdule/widgets/doctor_detail.dart';
 import '../modules/schdule/widgets/loading_search.dart';
+import '../modules/security/bindings/security_binding.dart';
+import '../modules/security/views/security_view.dart';
 import '../modules/splash/bindings/splash_binding.dart';
 import '../modules/splash/views/splash_view.dart';
 
@@ -149,6 +153,16 @@ class AppPages {
       name: _Paths.OTPPAGE,
       page: () => const OtppageView(),
       binding: OtppageBinding(),
+    ),
+    GetPage(
+      name: _Paths.MANAGEAKUN,
+      page: () => const ManageakunView(),
+      binding: ManageakunBinding(),
+    ),
+    GetPage(
+      name: _Paths.SECURITY,
+      page: () => const SecurityView(),
+      binding: SecurityBinding(),
     ),
   ];
 }
