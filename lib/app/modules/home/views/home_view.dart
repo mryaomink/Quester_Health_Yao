@@ -69,7 +69,7 @@ class HomeView extends GetView<HomeController> {
                 children: [
                   IconButton(
                     onPressed: () {
-                      Get.toNamed("/editprofile");
+                      Get.toNamed("/akun");
                     },
                     icon: const Icon(
                       Icons.person,
@@ -78,7 +78,7 @@ class HomeView extends GetView<HomeController> {
                   ),
                   InkWell(
                     onTap: () {
-                      Get.toNamed("/editprofile");
+                      Get.toNamed("/akun");
                     },
                     child: Text(
                       'Edit Account details',

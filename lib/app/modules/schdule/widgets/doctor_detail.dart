@@ -247,7 +247,9 @@ class DoctorDetail extends StatelessWidget {
               margin: const EdgeInsets.symmetric(horizontal: 20),
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(primary: Colors.blue),
-                onPressed: () {},
+                onPressed: () {
+                  Get.toNamed('/communication');
+                },
                 child: const Text('Continue'),
               ),
             )

@@ -17,38 +17,41 @@ class CariDoctor extends StatelessWidget {
           ),
         ],
       ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-        children: [
-          const Text(
-            'Search for a doctor',
-            style: TextStyle(
-                fontSize: 20.0,
-                color: Colors.black,
-                fontWeight: FontWeight.w600),
-          ),
-          const SizedBox(height: 8.0),
-          TextField(
-            decoration: InputDecoration(
-              border: const OutlineInputBorder(),
-              hintText: 'Type in doctor’s name',
-              suffixIcon: InkWell(
-                  onTap: () => Get.toNamed("/docdetails"),
-                  child: const Icon(Icons.search)),
+      body: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 24.0, vertical: 16.0),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            const Text(
+              'Search for a doctor',
+              style: TextStyle(
+                  fontSize: 20.0,
+                  color: Colors.black,
+                  fontWeight: FontWeight.w600),
             ),
-          ),
-          Container(
-            alignment: Alignment.bottomCenter,
-            width: double.infinity,
-            height: 52.0,
-            margin: const EdgeInsets.symmetric(horizontal: 20),
-            child: ElevatedButton(
-              style: ElevatedButton.styleFrom(primary: Colors.blue),
-              onPressed: () {},
-              child: const Text('Continue'),
+            const SizedBox(height: 8.0),
+            TextField(
+              decoration: InputDecoration(
+                border: const OutlineInputBorder(),
+                hintText: 'Type in doctor’s name',
+                suffixIcon: InkWell(
+                    onTap: () => Get.toNamed("/docdetails"),
+                    child: const Icon(Icons.search)),
+              ),
             ),
-          )
-        ],
+            Container(
+              alignment: Alignment.bottomCenter,
+              width: double.infinity,
+              height: 52.0,
+              margin: const EdgeInsets.symmetric(horizontal: 20),
+              child: ElevatedButton(
+                style: ElevatedButton.styleFrom(primary: Colors.blue),
+                onPressed: () {},
+                child: const Text('Continue'),
+              ),
+            )
+          ],
+        ),
       ),
     );
   }

@@ -1,4 +1,5 @@
 import 'package:get/get.dart';
+import 'package:quest_health/app/modules/schdule/widgets/choose_communication.dart';
 
 import '../modules/addpayment/bindings/addpayment_binding.dart';
 import '../modules/addpayment/views/addpayment_view.dart';
@@ -163,6 +164,10 @@ class AppPages {
       name: _Paths.SECURITY,
       page: () => const SecurityView(),
       binding: SecurityBinding(),
+    ),
+    GetPage(
+      name: _Paths.COMMUNICATION,
+      page: () => const ChooseCommunication(),
     ),
   ];
 }
