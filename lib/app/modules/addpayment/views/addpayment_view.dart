@@ -104,10 +104,9 @@ class AddpaymentView extends GetView<AddpaymentController> {
                   ],
                 ),
                 Container(
-                  alignment: Alignment.bottomCenter,
                   width: double.infinity,
                   height: 52.0,
-                  margin: const EdgeInsets.symmetric(horizontal: 20),
+                  margin: const EdgeInsets.symmetric(vertical: 24.0),
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(primary: Colors.blue),
                     onPressed: () {},
@@ -119,7 +118,7 @@ class AddpaymentView extends GetView<AddpaymentController> {
                           fontWeight: FontWeight.w600),
                     ),
                   ),
-                )
+                ),
               ],
             ),
           ),

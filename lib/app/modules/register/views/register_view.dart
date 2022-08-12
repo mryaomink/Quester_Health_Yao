@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:quest_health/app/routes/app_pages.dart';
 
 import '../controllers/register_controller.dart';
 
@@ -126,6 +127,7 @@ class RegisterView extends GetView<RegisterController> {
                       text: TextSpan(
                         text: "I agree to the",
                         style: GoogleFonts.nunito(
+                          fontSize: 12.0,
                           fontWeight: FontWeight.w300,
                           color: Colors.black,
                         ),
@@ -134,6 +136,13 @@ class RegisterView extends GetView<RegisterController> {
                             text: " Terms and Conditions, Privacy Policy",
                             style: GoogleFonts.nunito(
                                 fontWeight: FontWeight.w500,
+                                fontSize: 13.0,
+                                color: Colors.black),
+                          ),
+                          TextSpan(
+                            text: " \nusing the platform",
+                            style: GoogleFonts.nunito(
+                                fontWeight: FontWeight.w300,
                                 fontSize: 12.0,
                                 color: Colors.black),
                           ),
@@ -146,10 +155,15 @@ class RegisterView extends GetView<RegisterController> {
               Container(
                 width: double.infinity,
                 height: 60,
-                margin: const EdgeInsets.symmetric(horizontal: 24.0),
+                margin: const EdgeInsets.symmetric(
+                    horizontal: 24.0, vertical: 48.0),
                 child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(primary: Colors.blue),
-                    onPressed: () {},
+                    style: ElevatedButton.styleFrom(
+                      primary: const Color(0xff38B6FF),
+                    ),
+                    onPressed: () {
+                      Get.offAllNamed(Routes.NAVBAR);
+                    },
                     child: const Text(
                       'Create Account',
                       style: TextStyle(color: Colors.white),

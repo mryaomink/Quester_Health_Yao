@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:quest_health/app/routes/app_pages.dart';
 
 import '../controllers/home_controller.dart';
 
@@ -40,27 +41,32 @@ class HomeView extends GetView<HomeController> {
               DrawerHeader(
                 child: Container(
                   color: Colors.white,
-                  child: ListTile(
-                    leading: InkWell(
-                      onTap: () => Get.toNamed("/akun"),
-                      child: const CircleAvatar(
-                        backgroundColor: Colors.black,
+                  child: Card(
+                    child: ListTile(
+                      leading: InkWell(
+                        onTap: () => Get.toNamed("/akun"),
+                        child: const CircleAvatar(
+                          backgroundColor: Colors.black,
+                          radius: 30,
+                          backgroundImage: NetworkImage(
+                              'https://images.unsplash.com/photo-1501196354995-cbb51c65aaea?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80'),
+                        ),
                       ),
-                    ),
-                    title: Text(
-                      'Kweku Frimpong',
-                      style: GoogleFonts.nunito(
-                          fontSize: 16.0, color: Colors.black),
-                    ),
-                    subtitle: Text(
-                      'QHC###',
-                      style: GoogleFonts.nunito(fontWeight: FontWeight.w400),
-                    ),
-                    trailing: IconButton(
-                      onPressed: () {
-                        scaffoldKey.currentState!.closeDrawer();
-                      },
-                      icon: const Icon(Icons.close),
+                      title: Text(
+                        'Kweku Frimpong',
+                        style: GoogleFonts.nunito(
+                            fontSize: 16.0, color: Colors.black),
+                      ),
+                      subtitle: Text(
+                        'QHC###',
+                        style: GoogleFonts.nunito(fontWeight: FontWeight.w400),
+                      ),
+                      trailing: IconButton(
+                        onPressed: () {
+                          scaffoldKey.currentState!.closeDrawer();
+                        },
+                        icon: const Icon(Icons.close),
+                      ),
                     ),
                   ),
                 ),
@@ -188,7 +194,7 @@ class HomeView extends GetView<HomeController> {
                   ),
                   InkWell(
                     onTap: () {
-                      Get.toNamed("/auth");
+                      Get.offAllNamed(Routes.AUTH);
                     },
                     child: Text(
                       'Logout',
@@ -310,15 +316,16 @@ class HomeView extends GetView<HomeController> {
             Container(
               margin: const EdgeInsets.symmetric(horizontal: 24.0),
               width: MediaQuery.of(context).size.width,
-              height: 119.0,
               decoration: BoxDecoration(
                 color: const Color(0xff38B6FF),
                 borderRadius: BorderRadius.circular(5.0),
               ),
               child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   ListTile(
+                    contentPadding: const EdgeInsets.all(2.0),
                     leading: const CircleAvatar(
                       radius: 48.0,
                       backgroundImage: NetworkImage(
@@ -344,63 +351,21 @@ class HomeView extends GetView<HomeController> {
                     ),
                     trailing: Container(
                       alignment: Alignment.center,
+                      margin: const EdgeInsets.all(4.0),
                       width: 76.0,
                       height: 23.0,
                       decoration: BoxDecoration(
-                        color: const Color(0xff66CF5D),
+                        color: const Color.fromARGB(255, 26, 84, 219),
                         borderRadius: BorderRadius.circular(5.0),
                       ),
                       child: Text(
-                        'Voice Call',
+                        'Tap to Start call',
                         style: GoogleFonts.nunito(
-                            fontSize: 12.0,
+                            fontSize: 10.0,
                             color: Colors.white,
                             fontWeight: FontWeight.w400),
                       ),
                     ),
-                  ),
-                  const SizedBox(
-                    height: 17.0,
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: [
-                      Row(
-                        children: [
-                          const Icon(Icons.date_range,
-                              size: 16.0, color: Colors.white),
-                          const SizedBox(
-                            width: 8.0,
-                          ),
-                          Text(
-                            "01/01/2022",
-                            style: GoogleFonts.nunito(
-                                fontSize: 14.0,
-                                color: Colors.white,
-                                fontWeight: FontWeight.w400),
-                          ),
-                        ],
-                      ),
-                      Row(
-                        children: [
-                          const Icon(
-                            Icons.timer,
-                            size: 16,
-                            color: Colors.white,
-                          ),
-                          const SizedBox(
-                            width: 8.0,
-                          ),
-                          Text(
-                            "11:32 am",
-                            style: GoogleFonts.nunito(
-                                fontSize: 14.0,
-                                color: Colors.white,
-                                fontWeight: FontWeight.w400),
-                          ),
-                        ],
-                      )
-                    ],
                   ),
                 ],
               ),

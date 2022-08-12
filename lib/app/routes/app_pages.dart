@@ -1,5 +1,4 @@
 import 'package:get/get.dart';
-import 'package:quest_health/app/modules/schdule/widgets/choose_communication.dart';
 
 import '../modules/addpayment/bindings/addpayment_binding.dart';
 import '../modules/addpayment/views/addpayment_view.dart';
@@ -10,6 +9,8 @@ import '../modules/akun/views/akun_view.dart';
 import '../modules/appointment/yao_appointment.dart';
 import '../modules/auth/bindings/auth_binding.dart';
 import '../modules/auth/views/auth_view.dart';
+import '../modules/changepass/bindings/changepass_binding.dart';
+import '../modules/changepass/views/changepass_view.dart';
 import '../modules/chat/bindings/chat_binding.dart';
 import '../modules/chat/views/chat_view.dart';
 import '../modules/editprofile/bindings/editprofile_binding.dart';
@@ -36,12 +37,15 @@ import '../modules/register/views/register_view.dart';
 import '../modules/schdule/bindings/schdule_binding.dart';
 import '../modules/schdule/views/schdule_view.dart';
 import '../modules/schdule/widgets/cari_doctor.dart';
+import '../modules/schdule/widgets/choose_communication.dart';
 import '../modules/schdule/widgets/doctor_detail.dart';
 import '../modules/schdule/widgets/loading_search.dart';
 import '../modules/security/bindings/security_binding.dart';
 import '../modules/security/views/security_view.dart';
 import '../modules/splash/bindings/splash_binding.dart';
 import '../modules/splash/views/splash_view.dart';
+import '../modules/videoscreen/bindings/videoscreen_binding.dart';
+import '../modules/videoscreen/views/videoscreen_view.dart';
 
 part 'app_routes.dart';
 
@@ -168,6 +172,16 @@ class AppPages {
     GetPage(
       name: _Paths.COMMUNICATION,
       page: () => const ChooseCommunication(),
+    ),
+    GetPage(
+      name: _Paths.CHANGEPASS,
+      page: () => const ChangepassView(),
+      binding: ChangepassBinding(),
+    ),
+    GetPage(
+      name: _Paths.VIDEOSCREEN,
+      page: () => const VideoscreenView(),
+      binding: VideoscreenBinding(),
     ),
   ];
 }

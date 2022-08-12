@@ -81,16 +81,22 @@ class SplashView extends GetView<SplashController> {
                 const SizedBox(
                   height: 56.0,
                 ),
-                ElevatedButton(
-                  style: ElevatedButton.styleFrom(primary: Colors.blue),
-                  onPressed: controller.nextPage,
-                  child: Obx(
-                    () => Text(
-                      controller.islastpage ? "Continue" : "Next",
-                      style: GoogleFonts.nunito(
-                          fontSize: 16.0,
-                          color: Colors.white,
-                          fontWeight: FontWeight.w800),
+                SizedBox(
+                  height: 56.0,
+                  width: MediaQuery.of(context).size.width * 0.8,
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      primary: const Color(0xff38B6FF),
+                    ),
+                    onPressed: controller.nextPage,
+                    child: Obx(
+                      () => Text(
+                        controller.islastpage ? "Continue" : "Next ->",
+                        style: GoogleFonts.nunito(
+                            fontSize: 16.0,
+                            color: Colors.white,
+                            fontWeight: FontWeight.w800),
+                      ),
                     ),
                   ),
                 ),

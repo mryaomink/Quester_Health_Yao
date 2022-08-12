@@ -94,7 +94,7 @@ class ScheduleOne extends StatelessWidget {
                     backgroundColor: Colors.white,
                     value: schduleController.currentValue.value.toDouble() /
                         schduleController.maxPages.value,
-                    minHeight: 15.0,
+                    minHeight: 4.0,
                   )
                 ],
               ),
@@ -118,14 +118,15 @@ class ScheduleOne extends StatelessWidget {
             const SizedBox(
               height: 15.0,
             ),
+            const Spacer(),
             Container(
-              width: double.infinity,
+              width: MediaQuery.of(context).size.width,
               height: 52.0,
-              margin: const EdgeInsets.symmetric(
-                horizontal: 20,
-              ),
+              margin: const EdgeInsets.symmetric(vertical: 24.0),
               child: ElevatedButton(
-                style: ElevatedButton.styleFrom(primary: Colors.blue),
+                style: ElevatedButton.styleFrom(
+                  primary: const Color(0xff38B6FF),
+                ),
                 onPressed: () {
                   schduleController.pageController.nextPage(
                       duration: const Duration(milliseconds: 100),
@@ -184,7 +185,7 @@ class ScheduleTwo extends StatelessWidget {
                     backgroundColor: Colors.white,
                     value: schduleController.currentValue.value.toDouble() /
                         schduleController.maxPages.value,
-                    minHeight: 15.0,
+                    minHeight: 4.0,
                   )
                 ],
               ),
@@ -230,12 +231,15 @@ class ScheduleTwo extends StatelessWidget {
             const SizedBox(
               height: 15.0,
             ),
+            const Spacer(),
             Container(
-              width: double.infinity,
+              width: MediaQuery.of(context).size.width,
               height: 52.0,
-              margin: const EdgeInsets.symmetric(horizontal: 20),
+              margin: const EdgeInsets.symmetric(vertical: 24.0),
               child: ElevatedButton(
-                style: ElevatedButton.styleFrom(primary: Colors.blue),
+                style: ElevatedButton.styleFrom(
+                  primary: const Color(0xff38B6FF),
+                ),
                 onPressed: () {
                   schduleController.pageController.nextPage(
                       duration: const Duration(milliseconds: 100),
@@ -299,7 +303,7 @@ class ScheduleTiga extends StatelessWidget {
                       backgroundColor: Colors.white,
                       value: schduleController.currentValue.value.toDouble() /
                           schduleController.maxPages.value,
-                      minHeight: 15.0,
+                      minHeight: 4.0,
                     )
                   ],
                 ),
@@ -456,12 +460,13 @@ class ScheduleTiga extends StatelessWidget {
               const SizedBox(
                 height: 18.0,
               ),
-              Container(
-                width: double.infinity,
+              SizedBox(
+                width: MediaQuery.of(context).size.width,
                 height: 52.0,
-                margin: const EdgeInsets.symmetric(horizontal: 20),
                 child: ElevatedButton(
-                  style: ElevatedButton.styleFrom(primary: Colors.blue),
+                  style: ElevatedButton.styleFrom(
+                    primary: const Color(0xff38B6FF),
+                  ),
                   onPressed: () {
                     Get.offAndToNamed(Routes.NAVBAR);
                   },

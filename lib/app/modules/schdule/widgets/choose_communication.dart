@@ -38,23 +38,28 @@ class ChooseCommunication extends StatelessWidget {
           const SizedBox(
             height: 24.0,
           ),
-          Text(
+          const Text(
             'Choose comunication medium',
           ),
-          Container(
-            alignment: Alignment.centerLeft,
-            width: double.infinity,
-            height: 52.0,
-            padding: const EdgeInsets.all(16.0),
-            margin: const EdgeInsets.symmetric(
-              horizontal: 24.0,
-              vertical: 16.0,
+          InkWell(
+            onTap: () {
+              Get.toNamed('/videoscreen');
+            },
+            child: Container(
+              alignment: Alignment.centerLeft,
+              width: double.infinity,
+              height: 52.0,
+              padding: const EdgeInsets.all(16.0),
+              margin: const EdgeInsets.symmetric(
+                horizontal: 24.0,
+                vertical: 16.0,
+              ),
+              decoration: BoxDecoration(
+                color: Colors.blue,
+                border: Border.all(width: 1, color: Colors.black),
+              ),
+              child: const Text('Video Call'),
             ),
-            decoration: BoxDecoration(
-              color: Colors.blue,
-              border: Border.all(width: 1, color: Colors.black),
-            ),
-            child: Text('Video Call'),
           ),
           Container(
             alignment: Alignment.centerLeft,
@@ -68,7 +73,7 @@ class ChooseCommunication extends StatelessWidget {
             decoration: BoxDecoration(
               border: Border.all(width: 1, color: Colors.black),
             ),
-            child: Text('Voice Call'),
+            child: const Text('Voice Call'),
           )
         ],
       ),

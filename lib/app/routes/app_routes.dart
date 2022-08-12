@@ -32,6 +32,8 @@ abstract class Routes {
   static const MANAGEAKUN = _Paths.MANAGEAKUN;
   static const SECURITY = _Paths.SECURITY;
   static const COMMUNICATION = _Paths.COMMUNICATION;
+  static const CHANGEPASS = _Paths.CHANGEPASS;
+  static const VIDEOSCREEN = _Paths.VIDEOSCREEN;
 }
 
 abstract class _Paths {
@@ -63,4 +65,6 @@ abstract class _Paths {
   static const MANAGEAKUN = '/manageakun';
   static const SECURITY = '/security';
   static const COMMUNICATION = '/communication';
+  static const CHANGEPASS = '/changepass';
+  static const VIDEOSCREEN = '/videoscreen';
 }

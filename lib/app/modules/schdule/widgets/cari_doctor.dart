@@ -39,11 +39,11 @@ class CariDoctor extends StatelessWidget {
                     child: const Icon(Icons.search)),
               ),
             ),
+            const Spacer(),
             Container(
-              alignment: Alignment.bottomCenter,
               width: double.infinity,
               height: 52.0,
-              margin: const EdgeInsets.symmetric(horizontal: 20),
+              margin: const EdgeInsets.symmetric(vertical: 24),
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(primary: Colors.blue),
                 onPressed: () {},

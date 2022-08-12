@@ -67,7 +67,9 @@ class AuthView extends GetView<AuthController> {
                   horizontal: 24.0,
                 ),
                 child: ElevatedButton(
-                  style: ElevatedButton.styleFrom(primary: Colors.blue),
+                  style: ElevatedButton.styleFrom(
+                    primary: const Color(0xff38B6FF),
+                  ),
                   onPressed: () {
                     Get.toNamed('/register');
                   },

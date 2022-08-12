@@ -43,21 +43,50 @@ class _YaoNavbarState extends State<YaoNavbar> {
             navController.changeIndex(index);
           },
           currentIndex: navController.selectedIndex.value,
-          items: const [
+          items: [
             BottomNavigationBarItem(
-              icon: Icon(Icons.home),
+              icon: Image.asset(
+                'assets/images/home.png',
+                width: 24,
+                height: 24,
+              ),
               label: "Home",
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.history),
+              icon: Image.asset(
+                'assets/images/history.png',
+                width: 24,
+                height: 24,
+              ),
               label: "History",
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.chat),
+              icon: Stack(
+                children: [
+                  Image.asset(
+                    'assets/images/chat.png',
+                    width: 24,
+                    height: 24,
+                  ),
+                  // bisa di ganti dengan third party "Badge" di pub dev
+                  const Positioned(
+                      top: 0,
+                      right: 0,
+                      child: Icon(
+                        Icons.brightness_1,
+                        size: 12.0,
+                        color: Colors.redAccent,
+                      ))
+                ],
+              ),
               label: "Chat",
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.list),
+              icon: Image.asset(
+                'assets/images/prescription.png',
+                width: 24,
+                height: 24,
+              ),
               label: "prescriptions",
             )
           ],

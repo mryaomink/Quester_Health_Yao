@@ -32,16 +32,19 @@ class SecurityView extends GetView<SecurityController> {
         body: Column(
           children: [
             ListTile(
-              leading: Icon(Icons.lock),
-              title: Text('Change Password'),
-              trailing: Icon(Icons.navigate_next),
+              onTap: () {
+                Get.toNamed('/changepass');
+              },
+              leading: const Icon(Icons.lock),
+              title: const Text('Change Password'),
+              trailing: const Icon(Icons.navigate_next),
             ),
-            ListTile(
+            const ListTile(
               leading: Icon(Icons.face),
               title: Text('Enable Facial ID'),
               trailing: Icon(Icons.navigate_next),
             ),
-            ListTile(
+            const ListTile(
               leading: Icon(Icons.fingerprint),
               title: Text('Enable Fingerprint Login'),
               trailing: Icon(Icons.navigate_next),

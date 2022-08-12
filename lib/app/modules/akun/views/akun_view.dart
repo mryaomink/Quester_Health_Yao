@@ -30,75 +30,87 @@ class AkunView extends GetView<AkunController> {
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 24.0),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.end,
-            children: [
-              Padding(
-                padding: const EdgeInsets.symmetric(vertical: 20.0),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    const CircleAvatar(
-                      backgroundColor: Colors.red,
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        IconButton(
-                          onPressed: () {},
-                          icon: const Icon(Icons.edit_sharp),
+          child: Expanded(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.end,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 20.0),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      const CircleAvatar(
+                        radius: 50.0,
+                        backgroundImage: NetworkImage(
+                          'https://images.unsplash.com/photo-1501196354995-cbb51c65aaea?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80',
                         ),
-                        const Text('Change profile pic')
-                      ],
-                    ),
-                    const SizedBox(
-                      height: 30.0,
-                    ),
-                    const TextField(
-                      decoration: InputDecoration(
-                          border: OutlineInputBorder(),
-                          hintText: 'Yaomink',
-                          label: Text('Name')),
-                    ),
-                    const SizedBox(
-                      height: 15.0,
-                    ),
-                    const TextField(
-                      decoration: InputDecoration(
-                          border: OutlineInputBorder(),
-                          hintText: '+62',
-                          label: Text('Phone Number')),
-                    ),
-                    const SizedBox(
-                      height: 15.0,
-                    ),
-                    const TextField(
-                      decoration: InputDecoration(
-                          border: OutlineInputBorder(),
-                          hintText: '@gmail.com',
-                          label: Text('Email')),
-                    ),
-                    const SizedBox(
-                      height: 15.0,
-                    ),
-                    Container(
-                      alignment: Alignment.bottomCenter,
-                      width: double.infinity,
-                      height: 52.0,
-                      margin: const EdgeInsets.symmetric(horizontal: 20),
-                      child: ElevatedButton(
-                        style: ElevatedButton.styleFrom(primary: Colors.blue),
-                        onPressed: () {
-                          Get.toNamed("/navbar");
-                        },
-                        child: const Text('Save changes'),
                       ),
-                    )
-                  ],
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          IconButton(
+                            onPressed: () {},
+                            icon: const Icon(
+                              Icons.edit_sharp,
+                              size: 14.0,
+                            ),
+                          ),
+                          const Text('Change profile pic')
+                        ],
+                      ),
+                      const SizedBox(
+                        height: 30.0,
+                      ),
+                      const TextField(
+                        decoration: InputDecoration(
+                            border: OutlineInputBorder(),
+                            hintText: 'Yaomink',
+                            label: Text('Name')),
+                      ),
+                      const SizedBox(
+                        height: 15.0,
+                      ),
+                      const TextField(
+                        decoration: InputDecoration(
+                            border: OutlineInputBorder(),
+                            hintText: '+62',
+                            label: Text('Phone Number')),
+                      ),
+                      const SizedBox(
+                        height: 15.0,
+                      ),
+                      const TextField(
+                        decoration: InputDecoration(
+                            border: OutlineInputBorder(),
+                            hintText: '@gmail.com',
+                            label: Text('Email')),
+                      ),
+                      const SizedBox(
+                        height: 15.0,
+                      ),
+                      Align(
+                        alignment: Alignment.bottomCenter,
+                        child: Container(
+                          width: double.infinity,
+                          height: 52.0,
+                          margin: const EdgeInsets.symmetric(vertical: 20),
+                          child: ElevatedButton(
+                            style:
+                                ElevatedButton.styleFrom(primary: Colors.blue),
+                            onPressed: () {
+                              Get.toNamed("/navbar");
+                            },
+                            child: const Text('Save changes'),
+                          ),
+                        ),
+                      )
+                    ],
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ),

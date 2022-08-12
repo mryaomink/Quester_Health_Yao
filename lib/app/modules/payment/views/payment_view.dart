@@ -24,11 +24,11 @@ class PaymentView extends GetView<PaymentController> {
         title: Text(
           'Payment Details',
           style: GoogleFonts.nunito(
-              color: Colors.white, fontWeight: FontWeight.w700),
+              color: Colors.black, fontWeight: FontWeight.w700),
         ),
         centerTitle: true,
       ),
-      body: ListView(
+      body: Column(
         children: [
           Container(
             color: Colors.blue,
@@ -59,11 +59,13 @@ class PaymentView extends GetView<PaymentController> {
               trailing: const Icon(Icons.arrow_forward_ios_sharp),
             ),
           ),
+          const Spacer(
+            flex: 1,
+          ),
           Container(
-            alignment: Alignment.bottomCenter,
-            width: double.infinity,
+            width: MediaQuery.of(context).size.width,
             height: 52.0,
-            margin: const EdgeInsets.symmetric(horizontal: 20),
+            margin: const EdgeInsets.symmetric(horizontal: 24, vertical: 24.0),
             child: ElevatedButton(
               style: ElevatedButton.styleFrom(primary: Colors.blue),
               onPressed: () {
