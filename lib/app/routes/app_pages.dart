@@ -30,6 +30,8 @@ import '../modules/otppage/bindings/otppage_binding.dart';
 import '../modules/otppage/views/otppage_view.dart';
 import '../modules/payment/bindings/payment_binding.dart';
 import '../modules/payment/views/payment_view.dart';
+import '../modules/prescriptiondetail/bindings/prescriptiondetail_binding.dart';
+import '../modules/prescriptiondetail/views/prescriptiondetail_view.dart';
 import '../modules/prescriptions/bindings/prescriptions_binding.dart';
 import '../modules/prescriptions/views/prescriptions_view.dart';
 import '../modules/register/bindings/register_binding.dart';
@@ -42,8 +44,12 @@ import '../modules/schdule/widgets/doctor_detail.dart';
 import '../modules/schdule/widgets/loading_search.dart';
 import '../modules/security/bindings/security_binding.dart';
 import '../modules/security/views/security_view.dart';
+import '../modules/session/bindings/session_binding.dart';
+import '../modules/session/views/session_view.dart';
 import '../modules/splash/bindings/splash_binding.dart';
 import '../modules/splash/views/splash_view.dart';
+import '../modules/videocall/bindings/videocall_binding.dart';
+import '../modules/videocall/views/videocall_view.dart';
 import '../modules/videoscreen/bindings/videoscreen_binding.dart';
 import '../modules/videoscreen/views/videoscreen_view.dart';
 
@@ -182,6 +188,21 @@ class AppPages {
       name: _Paths.VIDEOSCREEN,
       page: () => const VideoscreenView(),
       binding: VideoscreenBinding(),
+    ),
+    GetPage(
+      name: _Paths.VIDEOCALL,
+      page: () => const VideocallView(),
+      binding: VideocallBinding(),
+    ),
+    GetPage(
+      name: _Paths.SESSION,
+      page: () => const SessionView(),
+      binding: SessionBinding(),
+    ),
+    GetPage(
+      name: _Paths.PRESCRIPTIONDETAIL,
+      page: () => const PrescriptiondetailView(),
+      binding: PrescriptiondetailBinding(),
     ),
   ];
 }

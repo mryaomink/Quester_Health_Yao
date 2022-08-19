@@ -34,6 +34,9 @@ abstract class Routes {
   static const COMMUNICATION = _Paths.COMMUNICATION;
   static const CHANGEPASS = _Paths.CHANGEPASS;
   static const VIDEOSCREEN = _Paths.VIDEOSCREEN;
+  static const VIDEOCALL = _Paths.VIDEOCALL;
+  static const SESSION = _Paths.SESSION;
+  static const PRESCRIPTIONDETAIL = _Paths.PRESCRIPTIONDETAIL;
 }
 
 abstract class _Paths {
@@ -67,4 +70,7 @@ abstract class _Paths {
   static const COMMUNICATION = '/communication';
   static const CHANGEPASS = '/changepass';
   static const VIDEOSCREEN = '/videoscreen';
+  static const VIDEOCALL = '/videocall';
+  static const SESSION = '/session';
+  static const PRESCRIPTIONDETAIL = '/prescriptiondetail';
 }

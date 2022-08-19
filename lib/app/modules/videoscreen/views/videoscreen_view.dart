@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import '../controllers/videoscreen_controller.dart';
 
@@ -9,18 +10,31 @@ class VideoscreenView extends GetView<VideoscreenController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 89, 86, 86),
+      backgroundColor: const Color(0xff434343),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Column(
-            children: const [
-              Icon(
+            children: [
+              const Icon(
                 Icons.wifi_calling,
+                color: Color(0xff059E04),
               ),
-              Text('Calling'),
-              Text('Dr. Jason Brown Jnr.'),
+              Text(
+                'Calling',
+                style: GoogleFonts.nunito(
+                  color: Colors.white,
+                  fontSize: 16.0,
+                ),
+              ),
+              Text(
+                'Dr. Jason Brown Jnr.',
+                style: GoogleFonts.nunito(
+                  color: Colors.white,
+                  fontSize: 16.0,
+                ),
+              ),
             ],
           ),
           const CircleAvatar(
@@ -30,42 +44,24 @@ class VideoscreenView extends GetView<VideoscreenController> {
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Column(
-                children: [
-                  IconButton(
-                    onPressed: () {},
-                    icon: const Icon(Icons.mic_off),
-                  ),
-                  const Text('Mute')
-                ],
+            children: const [
+              CircleAvatar(
+                radius: 24,
+                backgroundImage: AssetImage('assets/images/micoff.png'),
               ),
-              const SizedBox(
-                width: 10,
+              SizedBox(
+                width: 20,
               ),
-              Column(
-                children: [
-                  IconButton(
-                    onPressed: () {},
-                    icon: const Icon(Icons.speaker),
-                  ),
-                  const Text('Speaker')
-                ],
+              CircleAvatar(
+                radius: 24,
+                backgroundImage: AssetImage('assets/images/soundon.png'),
               ),
             ],
           ),
-          SizedBox(
-            width: 50.0,
-            height: 50.0,
-            child: IconButton(
-              onPressed: () {},
-              icon: const Icon(
-                Icons.phone_disabled,
-                size: 30.0,
-                color: Colors.red,
-              ),
-            ),
-          )
+          const CircleAvatar(
+            radius: 24,
+            backgroundImage: AssetImage('assets/images/callend.png'),
+          ),
         ],
       ),
     );
