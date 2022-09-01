@@ -36,8 +36,8 @@ class ChatView extends GetView<ChatController> {
                   Image.asset(
                     'assets/images/opennew.png',
                     fit: BoxFit.cover,
-                    width: 16.0,
-                    height: 16.0,
+                    width: 24.0,
+                    height: 24.0,
                   ),
                 ],
               ),
