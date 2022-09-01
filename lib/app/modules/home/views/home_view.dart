@@ -71,6 +71,17 @@ class HomeView extends GetView<HomeController> {
                   ),
                 ),
               ),
+              Padding(
+                padding: const EdgeInsets.only(left: 32.0),
+                child: Text(
+                  'MY ACCOUNT',
+                  style: GoogleFonts.nunito(
+                    fontSize: 12.0,
+                    color: const Color(0xff6a6a6a),
+                    fontWeight: FontWeight.w700,
+                  ),
+                ),
+              ),
               Row(
                 children: [
                   IconButton(
@@ -119,28 +130,6 @@ class HomeView extends GetView<HomeController> {
                 children: [
                   IconButton(
                     onPressed: () {
-                      Get.toNamed("/payment");
-                    },
-                    icon: const Icon(
-                      Icons.payment,
-                      color: Colors.black,
-                    ),
-                  ),
-                  InkWell(
-                    onTap: () {
-                      Get.toNamed("/payment");
-                    },
-                    child: Text(
-                      'Payment details',
-                      style: GoogleFonts.nunito(fontSize: 16.0),
-                    ),
-                  ),
-                ],
-              ),
-              Row(
-                children: [
-                  IconButton(
-                    onPressed: () {
                       Get.toNamed("/manageakun");
                     },
                     icon: const Icon(
@@ -163,6 +152,39 @@ class HomeView extends GetView<HomeController> {
                 children: [
                   IconButton(
                     onPressed: () {
+                      Get.toNamed("/payment");
+                    },
+                    icon: const Icon(
+                      Icons.payment,
+                      color: Colors.black,
+                    ),
+                  ),
+                  InkWell(
+                    onTap: () {
+                      Get.toNamed("/payment");
+                    },
+                    child: Text(
+                      'Payment details',
+                      style: GoogleFonts.nunito(fontSize: 16.0),
+                    ),
+                  ),
+                ],
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 32.0),
+                child: Text(
+                  'SETTINGS',
+                  style: GoogleFonts.nunito(
+                    fontSize: 12.0,
+                    color: const Color(0xff6a6a6a),
+                    fontWeight: FontWeight.w700,
+                  ),
+                ),
+              ),
+              Row(
+                children: [
+                  IconButton(
+                    onPressed: () {
                       Get.toNamed("/security");
                     },
                     icon: const Icon(
@@ -176,6 +198,105 @@ class HomeView extends GetView<HomeController> {
                     },
                     child: Text(
                       'Security',
+                      style: GoogleFonts.nunito(fontSize: 16.0),
+                    ),
+                  ),
+                ],
+              ),
+              Row(
+                children: [
+                  IconButton(
+                    onPressed: () {
+                      Get.toNamed("/darkmode");
+                    },
+                    icon: const Icon(
+                      Icons.monochrome_photos,
+                      color: Colors.black,
+                    ),
+                  ),
+                  InkWell(
+                    onTap: () {
+                      Get.toNamed("/darkmode");
+                    },
+                    child: Text(
+                      'Dark Mode',
+                      style: GoogleFonts.nunito(fontSize: 16.0),
+                    ),
+                  ),
+                ],
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 32.0),
+                child: Text(
+                  'LEGAL INFORMATION',
+                  style: GoogleFonts.nunito(
+                    fontSize: 12.0,
+                    color: const Color(0xff6a6a6a),
+                    fontWeight: FontWeight.w700,
+                  ),
+                ),
+              ),
+              Row(
+                children: [
+                  IconButton(
+                    onPressed: () {
+                      Get.toNamed("/terms");
+                    },
+                    icon: const Icon(
+                      Icons.document_scanner,
+                      color: Colors.black,
+                    ),
+                  ),
+                  InkWell(
+                    onTap: () {
+                      Get.toNamed("/terms");
+                    },
+                    child: Text(
+                      'Terms and Conditions',
+                      style: GoogleFonts.nunito(fontSize: 16.0),
+                    ),
+                  ),
+                ],
+              ),
+              Row(
+                children: [
+                  IconButton(
+                    onPressed: () {
+                      Get.toNamed("/privacy");
+                    },
+                    icon: const Icon(
+                      Icons.privacy_tip,
+                      color: Colors.black,
+                    ),
+                  ),
+                  InkWell(
+                    onTap: () {
+                      Get.toNamed("/privacy");
+                    },
+                    child: Text(
+                      'Privacy Policy',
+                      style: GoogleFonts.nunito(fontSize: 16.0),
+                    ),
+                  ),
+                ],
+              ),
+              Row(
+                children: [
+                  IconButton(
+                    onPressed: () {
+                      Get.toNamed("/disclaimer");
+                    },
+                    icon: const Icon(
+                      Icons.warning,
+                      color: Colors.black,
+                    ),
+                  ),
+                  InkWell(
+                    onTap: () {
+                      Get.toNamed("/disclaimer");
+                    },
+                    child: Text(
+                      'Medical Disclaimer',
                       style: GoogleFonts.nunito(fontSize: 16.0),
                     ),
                   ),

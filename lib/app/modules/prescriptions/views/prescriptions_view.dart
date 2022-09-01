@@ -33,8 +33,8 @@ class PrescriptionsView extends GetView<PrescriptionsController> {
                 Image.asset(
                   'assets/images/opennew.png',
                   fit: BoxFit.cover,
-                  width: 16.0,
-                  height: 16.0,
+                  width: 24.0,
+                  height: 24.0,
                 ),
               ],
             ),
@@ -58,34 +58,41 @@ class PrescriptionsView extends GetView<PrescriptionsController> {
           ),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 24.0),
-            child: Card(
-              color: Colors.blue,
-              child: ListTile(
-                leading: Image.asset(
-                  'assets/images/plist.png',
-                  fit: BoxFit.cover,
-                  width: 24,
-                  height: 24,
-                ),
-                title: Text(
-                  '#202',
-                  style: GoogleFonts.nunito(
-                      fontSize: 14.0,
+            child: InkWell(
+              onTap: () {
+                Get.toNamed('/prescriptiondetail');
+              },
+              child: Card(
+                color: Colors.blue,
+                child: ListTile(
+                  leading: Image.asset(
+                    'assets/images/plist.png',
+                    fit: BoxFit.cover,
+                    width: 30,
+                    height: 30,
+                  ),
+                  title: Text(
+                    '#202',
+                    style: GoogleFonts.nunito(
+                        fontSize: 14.0,
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold),
+                  ),
+                  subtitle: Text(
+                    'Prescribed by Dr.Jason Brown Jnr.',
+                    style: GoogleFonts.nunito(
+                        fontSize: 12.0,
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold),
+                  ),
+                  trailing: IconButton(
+                    onPressed: () {
+                      Get.toNamed('/prescriptiondetail');
+                    },
+                    icon: const Icon(
+                      Icons.chevron_right,
                       color: Colors.white,
-                      fontWeight: FontWeight.bold),
-                ),
-                subtitle: Text(
-                  'Prescribed by Dr.Jason Brown Jnr.',
-                  style: GoogleFonts.nunito(
-                      fontSize: 12.0,
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold),
-                ),
-                trailing: IconButton(
-                  onPressed: () {},
-                  icon: const Icon(
-                    Icons.chevron_right,
-                    color: Colors.white,
+                    ),
                   ),
                 ),
               ),

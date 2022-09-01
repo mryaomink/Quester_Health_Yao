@@ -9,16 +9,64 @@ class PrescriptiondetailView extends GetView<PrescriptiondetailController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('PrescriptiondetailView'),
-        centerTitle: true,
-      ),
-      body: Center(
-        child: Text(
-          'PrescriptiondetailView is working',
-          style: TextStyle(fontSize: 20),
+        appBar: AppBar(
+          title: const Text('Prescription Details'),
+          centerTitle: true,
         ),
-      ),
-    );
+        body: Padding(
+          padding: const EdgeInsets.symmetric(vertical: 24.0),
+          child: Column(
+            children: [
+              const CircleAvatar(
+                backgroundImage: AssetImage('assets/images/plist.png'),
+              ),
+              const SizedBox(
+                height: 12.0,
+              ),
+              const Text('#202'),
+              const SizedBox(
+                height: 32.0,
+              ),
+              Expanded(
+                child: ListView(
+                  children: [
+                    Card(
+                      color: Colors.blue,
+                      child: ListTile(
+                        leading: const CircleAvatar(
+                          backgroundImage: AssetImage('assets/images/obat.png'),
+                        ),
+                        title: const Text('Drug name'),
+                        subtitle:
+                            const Text('Prescribed by Dr. Jason Brown Jnr.'),
+                        trailing: IconButton(
+                            onPressed: () {},
+                            icon: const Icon(Icons.arrow_forward)),
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 8.0,
+                    ),
+                    Card(
+                      color: Colors.blue,
+                      child: ListTile(
+                        leading: const CircleAvatar(
+                          backgroundImage:
+                              AssetImage('assets/images/medic.png'),
+                        ),
+                        title: const Text('Drug name'),
+                        subtitle:
+                            const Text('Prescribed by Dr. Jason Brown Jnr.'),
+                        trailing: IconButton(
+                            onPressed: () {},
+                            icon: const Icon(Icons.arrow_forward)),
+                      ),
+                    ),
+                  ],
+                ),
+              )
+            ],
+          ),
+        ));
   }
 }

@@ -62,30 +62,70 @@ class ChatView extends GetView<ChatController> {
             const SizedBox(
               height: 16.0,
             ),
-            Card(
-              child: ListTile(
-                leading: const CircleAvatar(
-                  backgroundImage: AssetImage(
-                    'assets/images/vidcallsmall.png',
-                  ),
-                ),
-                title: Text(
-                  'Akwesi Prat',
-                  style:
-                      GoogleFonts.nunito(fontSize: 14.0, color: Colors.black),
-                ),
-                subtitle: Text(
-                  'Prescribed by Dr.Jason Brown Jnr.',
-                  style:
-                      GoogleFonts.nunito(fontSize: 12.0, color: Colors.black),
-                ),
-                trailing: Text(
-                  'Yesterday',
-                  style: GoogleFonts.nunito(fontSize: 12.0, color: Colors.blue),
-                ),
-              ),
+            const ChatYao(
+              imgAsset: 'assets/images/vidcall.png',
+              nama: 'Evelyn White',
+              desc: 'Etiam placerat urna nec orci congue...',
+              time: 'Yesterday',
+            ),
+            const ChatYao(
+              imgAsset: 'assets/images/vidcall.png',
+              nama: 'Akwesi Pratt',
+              desc: 'Etiam placerat urna nec orci congue...',
+              time: 'Yesterday',
+            ),
+            const ChatYao(
+              imgAsset: 'assets/images/vidcall.png',
+              nama: 'Miss Duncan',
+              desc: 'Etiam placerat urna nec orci congue...',
+              time: 'Yesterday',
+            ),
+            const ChatYao(
+              imgAsset: 'assets/images/vidcall.png',
+              nama: 'Alfred Nkansah',
+              desc: 'Etiam placerat urna nec orci congue...',
+              time: 'Yesterday',
             ),
           ],
+        ),
+      ),
+    );
+  }
+}
+
+class ChatYao extends StatelessWidget {
+  final String imgAsset;
+  final String nama;
+  final String desc;
+  final String time;
+  const ChatYao({
+    Key? key,
+    required this.imgAsset,
+    required this.nama,
+    required this.desc,
+    required this.time,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      child: ListTile(
+        leading: CircleAvatar(
+          backgroundImage: AssetImage(
+            imgAsset,
+          ),
+        ),
+        title: Text(
+          nama,
+          style: GoogleFonts.nunito(fontSize: 14.0, color: Colors.black),
+        ),
+        subtitle: Text(
+          desc,
+          style: GoogleFonts.nunito(fontSize: 12.0, color: Colors.black),
+        ),
+        trailing: Text(
+          time,
+          style: GoogleFonts.nunito(fontSize: 12.0, color: Colors.blue),
         ),
       ),
     );

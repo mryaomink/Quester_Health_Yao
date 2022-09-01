@@ -39,6 +39,17 @@ class CariDoctor extends StatelessWidget {
                     child: const Icon(Icons.search)),
               ),
             ),
+            ListTile(
+              leading: const CircleAvatar(
+                backgroundImage: AssetImage('assets/images/vidcall.png'),
+              ),
+              title: const Text('Kofi Amoah'),
+              subtitle: const Text('Job Title'),
+              trailing: IconButton(
+                onPressed: () {},
+                icon: const Icon(Icons.arrow_downward),
+              ),
+            ),
             const Spacer(),
             Container(
               width: double.infinity,
